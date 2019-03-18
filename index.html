@@ -50,7 +50,7 @@
         // shows the value from bottom out - dependent on which box is clicked first
         console.log(this.classList.value);
         // stop bubbling this event up - only shows the value of the box clicked aka stop bubbling
-        e.stopPropagation();
+        // e.stopPropagation();
     };
 
     document.body.addEventListener("click", logText)
@@ -61,6 +61,12 @@
         // listen to a click once and unbind itself so there won't be any future clicks on the boxes (one, two, three), event will only run once
         once: true
     }));
+
+    button.addEventListener("click", () => {
+        console.log("Click!!!!");
+    }, {
+        once: true
+    })
 </script>
 </body>
 </html>
